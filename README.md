@@ -1,4 +1,4 @@
-## Projeto To Do List :memo: :pencil:
+## Projeto To Do List :memo:
 
 ### Quarto projeto do curso de Desenvolvimento Full Stack Web da Trybe.
 
