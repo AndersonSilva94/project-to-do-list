@@ -15,7 +15,15 @@ const listItens = document.getElementsByTagName('li');
 const buttonSave = document.getElementById('salvar-tarefas');
 buttonSave.innerText = 'Salvar';
 
-buttonInsertItem.addEventListener('click', () => {
+buttonInsertItem.addEventListener('click', insertItem);
+
+inputList.addEventListener('keyup', (e) => {
+  if(e.key === 'Enter'){
+    insertItem();
+  }
+})
+
+function insertItem() {
   if (inputList.value === '') {
     alert('Digite uma tarefa válida!');
   } else {
@@ -24,7 +32,7 @@ buttonInsertItem.addEventListener('click', () => {
     taskList.appendChild(listItem);
   }
   inputList.value = '';
-});
+}
 
 // Requisito 10
 buttonClear.addEventListener('click', () => {
