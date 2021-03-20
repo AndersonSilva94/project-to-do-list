@@ -1,6 +1,4 @@
 // Variáveis e atribuições
-const paragraph = document.getElementById('funcionamento');
-paragraph.innerText = 'Clique duas vezes em um item para marcá-lo como completo';
 const taskList = document.getElementById('lista-tarefas');
 const buttonInsertItem = document.getElementById('criar-tarefa');
 buttonInsertItem.innerText = 'Inserir';
@@ -8,7 +6,10 @@ const buttonClear = document.getElementById('apaga-tudo');
 buttonClear.innerText = 'Apagar';
 const buttonClearCompleted = document.getElementById('remover-finalizados');
 buttonClearCompleted.innerText = 'Remover Finalizados';
+const buttonClearSelected = document.getElementById('remover-selecionado');
+buttonClearSelected.innerText = 'Remover Selecionado';
 const inputList = document.getElementById('texto-tarefa');
+inputList.placeholder = 'Digite sua tarefa'
 const listClick = document.getElementsByTagName('ol')[0];
 const listItens = document.getElementsByTagName('li');
 const buttonSave = document.getElementById('salvar-tarefas');
@@ -81,3 +82,16 @@ function getTasks() {
   listClick.innerHTML = localStorage.getItem('listItens');
 }
 getTasks();
+
+
+//requisito 14
+function clearSelected() {
+  buttonClearSelected.addEventListener('click', () => {
+    for(let index = 0; index < listItens.length; index += 1) {
+      if(listItens[index].style.backgroundColor === 'rgb(128, 128, 128)') {
+        listClick.removeChild(listItens[index]);
+      }
+    }
+  })
+}
+clearSelected()

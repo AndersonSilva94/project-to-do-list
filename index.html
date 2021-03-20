@@ -5,21 +5,33 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projeto To Do List - Andy Silva</title>
-  <link rel="stylesheet" href="style.css"><link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+
 </head>
 <body>
   <main>
     <header>
       <h1>Minha Lista de Tarefas</h1>
     </header>
-    <p id="funcionamento"></p>
-    <button id="criar-tarefa"></button>
-    <button id="apaga-tudo"></button>
-    <input type="text" id="texto-tarefa">
-    <button id="remover-finalizados"></button>
-    <button id="salvar-tarefas"></button>
-    <ol id="lista-tarefas"></ol>
+    <p>- Clique uma vez para selecionar</p>
+    <p>- Clique duas vezes em um item para marcá-lo como completo</p>
+    <p>- Clique em 'Apagar', para excluir todas as tarefas</p>
+    <p>- Clique em 'Salvar', para guardar as tarefas no seu navegador</p>
+    <section>
+      <div class="input">
+        <input type="text" id="texto-tarefa">
+      <ol id="lista-tarefas"></ol>
+      </div>
+      <div class="buttons">
+        <button id="criar-tarefa"></button>
+        <button id="apaga-tudo"></button>
+        <button id="remover-finalizados"></button>
+        <button id="remover-selecionado"></button>
+        <button id="salvar-tarefas"></button>
+      </div>
+    </section>
   </main>
   <script src="script.js"></script>
 </body>
